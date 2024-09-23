@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/Manuque77/QA-project.git/'
+                git 'https://github.com/Manuque77/QA-project/tree/main'
             }
         }
         stage('Build') {
