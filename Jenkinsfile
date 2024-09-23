@@ -1,26 +1,21 @@
 pipeline {
     agent any
+
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/Manuque77/QA-project.git'
+                git 'https://github.com/Manuque77/QA-project.git'
             }
         }
-        stage('Build') {
+        stage('Install Dependencies') {
             steps {
-                echo 'Building the project...'
+                sh 'npm install'
             }
         }
-        stage('Test') {
+        stage('Run Cypress Tests') {
             steps {
-                echo 'Running tests...'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying the application...'
+                sh 'npx cypress run'
             }
         }
     }
 }
-
