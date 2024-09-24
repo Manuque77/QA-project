@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/Manuque77/QA-project.git'
+                git branch:'main', url: 'https://github.com/Manuque77/QA-project.git'
             }
         }
         stage('Install Dependencies') {
