@@ -1,0 +1,22 @@
+{
+  "name": "nuevoprojectoqa",
+  "version": "1.0.0",
+  "description": "jenkins_cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Manuque77/QA-project.git"
+  },
+  "keywords": [
+    "QA"
+  ],
+  "author": "MANUQUE",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Manuque77/QA-project/issues"
+  },
+  "homepage": "https://github.com/Manuque77/QA-project#readme"
+}
