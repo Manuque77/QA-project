@@ -6,8 +6,8 @@ pipeline {
             steps {
                 git branch:'main', url: 'https://github.com/Manuque77/QA-project.git'
             }
-        }
-        stage('Install Dependencies') {
+         stages {
+             stage('Install Dependencies') {
             steps {
                 bat 'npm ci'
             }
@@ -16,6 +16,7 @@ pipeline {
             steps {
                 bat 'npx cypress run'
             }
+       
         }
     }
 }
