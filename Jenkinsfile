@@ -9,12 +9,18 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                bat 'npm ci'
+                // Cambia al directorio de tu proyecto
+                dir('NuevoProjectoQA') {
+                    bat 'npm ci'
+                }
             }
         }
         stage('Run Cypress Tests') {
             steps {
-               bat 'npx cypress run --config-file cypress.config.js'
+                // Cambia al directorio donde está cypress.config.js
+                dir('NuevoProjectoQA') {
+                    bat 'npx cypress run --config-file cypress.config.js'
+                }
             }
         }
     }
