@@ -23,5 +23,11 @@ pipeline {
                 }
             }
         }
+        post {
+    always {
+        junit 'cypress/results/*.xml' // Asegúrate de exportar los resultados en JUnit desde Cypress
+    }
+}
+
     }
 }
