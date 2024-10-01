@@ -9,25 +9,16 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                // Cambia al directorio de tu proyecto
-                dir('NuevoProjectoQA') {
-                    bat 'npm ci'
-                }
+                bat 'npm ci'
             }
         }
         stage('Run Cypress Tests') {
             steps {
-                // Cambia al directorio donde está cypress.config.js
                 dir('NuevoProjectoQA') {
+                    bat 'dir'  // Verifica la estructura de archivos
                     bat 'npx cypress run --config-file cypress.config.js'
                 }
             }
         }
-        post {
-    always {
-        junit 'cypress/results/*.xml' // Asegúrate de exportar los resultados en JUnit desde Cypress
-    }
-}
-
     }
 }
